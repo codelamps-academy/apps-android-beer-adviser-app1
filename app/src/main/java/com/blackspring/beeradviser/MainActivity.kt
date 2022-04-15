@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val color = binding.beerColor.selectedItem
 
             val beerList = getBeers(color.toString())
-            val beers = beerList.reduce { str, item -> str + '\n' + item }
+            val beers = beerList.reduce { str, item -> str + "||" + item }
 
 //            val brands = findViewById<TextView>(R.id.brands)
             binding.brands.text = beers
